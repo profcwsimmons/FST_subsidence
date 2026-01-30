@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Land subsidence virtual lab</title>
+    <!--change the title of your site here-->
+    <meta name="description" content="Land subsidence virtual lab" />
+    <link type="text/css" href="/style.css" rel="stylesheet" />
+    <script type="text/javascript" src="script.js"></script>
+  </head>
+
+  <body>
+    <h1 id="highlighter">Effective stress and consolidation in soils</h1>
+    <h2>
+      This calculator allows the user to input soil unit weights and water table depth to determine total stress, pore pressure, and effective stress at a target depth.
+    </h2>
+    <div class="container">
+      <div class="leftcolumn">
+        <form>
+          <fieldset>
+            <legend>Soil Properties</legend>
+            <table>
+              <tr>
+                <td>Unit weight for unsaturated layer (kN/m<sup>3</sup>)</td>
+                <td>
+                  <input
+                    type="number"
+                    style="width: 4em"
+                    id="unsatunitweight"
+                    min="10"
+                    max="25"
+                    value="17"
+                  />
+                </td>
+              </tr>
+              <tr>
+                <td>Unit weight for saturated layer (kN/m<sup>3</sup>)</td>
+                <td>
+                  <input
+                    type="number"
+                    style="width: 4em"
+                    id="satunitweight"
+                    min="10"
+                    max="25"
+                    value="17"
+                  />
+                </td>
+              </tr>
+            </table>
+          </fieldset>
+          <p></p>
+          <fieldset>
+            <legend>Water Table</legend>
+            <table>
+              <tr>
+                <td>Depth of unsaturated soil layer (m)</td>
+                <td>
+                  <input
+                    type="number"
+                    style="width: 4em"
+                    id="tabledepth"
+                    min="0"
+                    max="1000"
+                    value="50"
+                  />
+                </td>
+              </tr>
+            </table>
+          </fieldset>
+          <p></p>
+          <fieldset>
+            <legend>Analysis</legend>
+            <table>
+              <tr>
+                <td>Depth of analysis plane (m)</td>
+                <td>
+                  <input
+                    type="number"
+                    style="width: 4em"
+                    id="planedepth"
+                    min="0"
+                    max="1000"
+                    value="100"
+                  />
+                </td>
+              </tr>
+            </table>
+          </fieldset>
+          <button
+            type="button"
+            id="calculate"
+            onclick="calculator()"
+            style="
+              margin-left: 6em;
+              margin-bottom: 1em;
+              margin-top: 1em;
+              color: black;
+            "
+          >
+            Calculate
+          </button>
+          <p></p>
+          <table>
+            <tr>
+              <td>
+                <label for="totalResult" style="width: 100%">
+                  Total stress (kPa):
+                </label>
+              </td>
+              <td>
+                <input
+                  type="text"
+                  id="totalResults"
+                  readonly
+                  style="
+                    color: red;
+                    margin-left: 15px;
+                    border: 1px solid black;
+                    height: 14px;
+                    width: 80%;
+                    text-align: center;
+                  "
+                />
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <label for="poreResult" style="width: 100%">
+                  Pore pressure (kPa):
+                </label>
+              </td>
+              <td>
+                <input
+                  type="text"
+                  id="poreResults"
+                  readonly
+                  style="
+                    color: red;
+                    margin-left: 15px;
+                    border: 1px solid black;
+                    height: 14px;
+                    width: 80%;
+                    text-align: center;
+                  "
+                />
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <label for="calcResult" style="width: 100%">
+                  Effective stress (kPa):
+                </label>
+              </td>
+              <td>
+                <input
+                  type="text"
+                  id="calcResults"
+                  readonly
+                  style="
+                    color: red;
+                    margin-left: 15px;
+                    border: 1px solid black;
+                    height: 14px;
+                    width: 80%;
+                    text-align: center;
+                  "
+                />
+              </td>
+            </tr>
+          </table>
+        </form>
+      </div>
+      <div class="rightcolumn">
+        <img style="width:385px;height:390px;" src="assets/soil%20profile2.jpg?">
+      </div>
+    </div>
+    <p>
+      
+    </p>
+    <div id="theory">
+    <h3>Theory</h3>
+    <h2>
+      The effective stress is the difference between the total vertical stress and the pore pressure. For saturated soils, hydrostatic pressure within the pore water helps to support a portion of the vertical stress, reducing the stress imposed on the soil matrix.
+    </h2>
+    </div>
+    
+  </body>
+</html>

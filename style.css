@@ -1,0 +1,60 @@
+/* CSS files add styling rules to your content */
+
+body {
+  font-family: helvetica, arial, sans-serif;
+  margin: 2em;
+}
+
+h1 {
+  font-style: italic;
+  color: #373fff;
+}
+
+h2 {
+  font-size: 15px;
+  width:1200px;
+  font-weight: normal;
+  color: #000;
+}
+
+h3 {
+  font-style:italic;
+  font-size:25px;
+  width:1200px;
+  font-weight: bold;
+  color: #373fff;
+}
+
+legend {
+    background-color: #000;
+    color: #fff;
+    padding: 3px 6px;
+}
+
+.container {
+  width: 100%;
+  display:table;
+}
+
+.leftcolumn {
+  display:table-cell;
+ float:left;
+  width:40%;
+  overflow:hidden;
+  padding-bottom: 100%;
+    margin-bottom: -100%;
+}
+
+.rightcolumn {
+  display:table-cell;
+  float:left;
+  width:60%;
+  overflow:hidden;
+  padding-bottom: 100%;
+    margin-bottom: -100%;
+}
+
+.theory {
+ width:100%;
+  display:table;
+}
